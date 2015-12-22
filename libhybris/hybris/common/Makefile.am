@@ -48,6 +48,9 @@ endif
 if WANT_DEBUG
 libhybris_common_la_CFLAGS += -ggdb -O0
 endif
+if WANT_MALI_QUIRKS
+libhybris_common_la_CFLAGS += -DMALI_QUIRKS
+endif
 libhybris_common_la_LDFLAGS = \
 	-ldl \
 	-lrt \
